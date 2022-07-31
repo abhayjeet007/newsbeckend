@@ -8,7 +8,7 @@ const app = express()
 const port = 5000||process.env.PORT;
 app.use(cors())
 app.use(express.json())
-app.use('/',(req,res)=>{res.send("gdkjhl")})
+app.get('/',(req,res)=>{res.send("gdkjhl")})
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
 
